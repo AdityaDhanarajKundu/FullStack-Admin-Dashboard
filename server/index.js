@@ -1,7 +1,7 @@
 // import the packages
 import express from 'express';
 import bodyParser from 'body-parser';
-import { Mongoose } from 'mongoose';
+import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
@@ -29,3 +29,17 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+
+// MONGOOSE SETUP
+
+const PORT = process.env.PORT || 9000;
+mongoose.connect(process.env.CONNECTION_URL, {
+    // New options for the modern MongoDB Node.js driver (4.0.0+):
+    // Use the new options directly within the mongoose connection.
+    serverSelectionTimeoutMS: 5000, // Timeout in milliseconds for server selection
+    // Other options can be added as needed...
+})
+.then(() => {
+    app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+})
+.catch((error) => console.error(`Error connecting to MongoDB: ${error.message}`));
