@@ -31,7 +31,6 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 // MONGOOSE SETUP
-
 const PORT = process.env.PORT || 9000;
 mongoose.connect(process.env.CONNECTION_URL, {
     // New options for the modern MongoDB Node.js driver (4.0.0+):
