@@ -16,6 +16,8 @@ export const globalSlice = createSlice({
     },
 })
 
+console.log(globalSlice);
+
 // destructuring the reducer function to export it
 export const { setMode } = globalSlice.actions;
 
