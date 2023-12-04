@@ -3,6 +3,7 @@ import {createTheme} from '@mui/material/styles';
 import { useMemo } from 'react';
 import {useSelector} from 'react-redux'; // hook function to select and access the state data from the redux store
 import { themeSettings } from './theme';
+import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -11,10 +12,17 @@ function App() {
   
   return (
     <div className="app">
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <h1>App</h1>
-      </ThemeProvider>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path='/' element={<Navigate to={"/dashboad"} replace />} />
+            </Route>
+            <Route path='/dashboard' element={<Dashboard />} />
+          </Routes>
+        </ThemeProvider>
+      </BrowserRouter>
     </div>
   )
 }
