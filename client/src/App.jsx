@@ -11,7 +11,10 @@ function App() {
   
   return (
     <div className="app">
-      <h1>App</h1>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <h1>App</h1>
+      </ThemeProvider>
     </div>
   )
 }
