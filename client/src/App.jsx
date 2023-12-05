@@ -5,8 +5,8 @@ import {useSelector} from 'react-redux'; // hook function to select and access t
 import { themeSettings } from './theme';
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 
-import Dashboard from 'scenes/Dashboard';
-import Layout from 'scenes/Layout';
+import Dashboard from './scenes/Dashboard';
+import Layout from './scenes/Layout';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
           <CssBaseline />
           <Routes>
             <Route element={<Layout />}>
-              <Route path='/' element={<Navigate to={"/dashboad"} replace />} />
+              <Route path='/' element={<Navigate to={"/dashboard"} replace />} />
             </Route>
             <Route path='/dashboard' element={<Dashboard />} />
           </Routes>
