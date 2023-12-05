@@ -5,6 +5,9 @@ import {useSelector} from 'react-redux'; // hook function to select and access t
 import { themeSettings } from './theme';
 import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 
+import Dashboard from 'scenes/Dashboard';
+import Layout from 'scenes/Layout';
+
 function App() {
 
   const mode = useSelector((store)=> store.global.mode); // access the state data from the redux store
