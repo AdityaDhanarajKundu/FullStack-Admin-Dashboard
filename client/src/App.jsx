@@ -7,6 +7,7 @@ import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 
 import Dashboard from './scenes/Dashboard';
 import Layout from './scenes/Layout';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -21,8 +22,8 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path='/' element={<Navigate to={"/dashboard"} replace />} />
+              <Route path='/dashboard' element={<Dashboard />} />
             </Route>
-            <Route path='/dashboard' element={<Dashboard />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
