@@ -57,11 +57,22 @@ function Sidebar({drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile}) {
                 sx={{
                     width: drawerWidth,
                     "& .MuiDrawer-paper": {
-                        color : theme.palette.secondary,
+                        color : theme.palette.secondary[200],
+                        backgroundColor: theme.palette.background.alt,
+                        boxSizing: "border-box",
+                        borderWidth: isNonMobile ? 0 : "2px",
+                        width: drawerWidth,
                     },
                 }}
-                }}
-            />
+            >
+                <Box width={"100%"}>
+                    <Box margin={"1.5rem 2rem 2rem 3rem"}>
+                        <FlexBetween color={theme.palette.secondary.main}>
+                            
+                        </FlexBetween>
+                    </Box>
+                </Box>
+            </Drawer>
         )}
     </Box>
   );
