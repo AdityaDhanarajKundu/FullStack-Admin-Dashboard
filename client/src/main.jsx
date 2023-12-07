@@ -5,6 +5,9 @@ import './index.css';
 import globalReducer from "./state/index.js";   // the reducer property of the globalSlice
 import { configureStore} from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+// import dotenv from 'dotenv';
+
+// dotenv.config();
 
 // creating the redux toolkit store
 const store = configureStore({
