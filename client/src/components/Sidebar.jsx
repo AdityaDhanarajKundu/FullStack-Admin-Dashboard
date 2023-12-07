@@ -68,7 +68,16 @@ function Sidebar({drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile}) {
                 <Box width={"100%"}>
                     <Box margin={"1.5rem 2rem 2rem 3rem"}>
                         <FlexBetween color={theme.palette.secondary.main}>
-                            
+                            <Box display={"flex"} alignItems={"center"} gap={"0.5rem"}>
+                                <Typography variant="h4" fontWeight="bold">
+                                    InsightFusion
+                                </Typography>
+                            </Box>
+                            {!isNonMobile && (
+                                <IconButton onClick={()=> setIsSidebarOpen(!isSidebarOpen)} >
+                                    <ChevronLeft />
+                                </IconButton>
+                            )}
                         </FlexBetween>
                     </Box>
                 </Box>
