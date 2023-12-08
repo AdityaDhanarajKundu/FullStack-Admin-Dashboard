@@ -205,7 +205,7 @@ function Sidebar({
             <FlexBetween textTransform={"none"} gap={"1rem"} m={"1.5rem 2rem 0 3rem"}>
               <Box 
                 component={"img"}
-                src={profileImage}
+                src={ogImage}
                 alt={"profile"}
                 height={"40px"}
                 width={"40px"}
