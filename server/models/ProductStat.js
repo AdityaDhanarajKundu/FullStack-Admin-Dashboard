@@ -25,6 +25,6 @@ const ProductStatSchema = mongoose.Schema(
 );
 
 // create the mongoose model
-const Product = mongoose.model("ProductStat", ProductStatSchema);
+const ProductStat = mongoose.model("ProductStat", ProductStatSchema);
 
-export default ProductStatSchema;
+export default ProductStat;
