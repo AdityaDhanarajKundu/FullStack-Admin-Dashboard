@@ -14,7 +14,7 @@ function Header({ title, subtitle }) {
       >
         {title}
       </Typography>
-      <Typography variant="h2" color={theme.palette.secondary[100]}>
+      <Typography variant="h5" color={theme.palette.secondary[300]}>
         {subtitle}
       </Typography>
     </Box>
