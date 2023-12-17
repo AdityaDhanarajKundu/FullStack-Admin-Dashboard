@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Box,
   Card,
@@ -70,6 +71,17 @@ function Product({
     );
 }
 
+Product.propTypes = {
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+    supply: PropTypes.number.isRequired,
+    stat: PropTypes.object.isRequired
+};
+
 function Products() {
   const {data, isLoading} = useGetProductsQuery();  
 
@@ -112,5 +124,16 @@ function Products() {
     </Box>
   );
 }
+
+Products.propTypes = {
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+    supply: PropTypes.number.isRequired,
+    stat: PropTypes.object.isRequired
+};
 
 export default Products;
