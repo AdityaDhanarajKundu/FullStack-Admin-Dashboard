@@ -7,7 +7,6 @@ function Customers(){
 
     const theme = useTheme(); // object of useTheme 
     const {data, isLoading} = useGetCustomersQuery();
-    console.log("data", data);
     
     //creating the columns for the datagrid
     const columns = [

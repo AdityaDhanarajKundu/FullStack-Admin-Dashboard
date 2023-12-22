@@ -86,9 +86,7 @@ function Products() {
   const {data, isLoading} = useGetProductsQuery();  
 
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
-  
-  console.log("data", data);  // should show list of 30 products from the database
-    
+      
   return (
     <Box margin={"1.5rem 2.5rem"}>
       <Header title="PRODUCTS" subtitle="See your list of products" />
