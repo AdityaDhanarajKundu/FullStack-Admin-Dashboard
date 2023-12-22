@@ -13,6 +13,7 @@ function Transactions() {
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
+  const [searchInput, setSearchInput] = useState(""); //temporary state to hold the what is the status of the search input value
 
   // calling the function to the backend
   const { data, isLoading } = useGetTransactionsQuery({
@@ -54,7 +55,7 @@ function Transactions() {
       headerName: "Cost",
       flex: 1,
       renderCell: (params) => {
-        return `$${Number(params.value).toFixed(2)}`;
+        return `Rs. ${Number(params.value).toFixed(2)}`;
       },
     },
   ];
@@ -94,7 +95,7 @@ function Transactions() {
           rows={(data && data.transactions) || []}
           columns={columns}
           rowCount={(data && data.total) || 0}
-          rowsPerPageOptions={[20, 50, 100]}
+          rowsPerPageOptions={[20, 50, 100]}  // options for the users to choose how many rows they want
           pagination
           page={page}
           pageSize={pageSize}
@@ -104,6 +105,9 @@ function Transactions() {
           onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
           onSortModelChange={(newSortModel) => setSort(...newSortModel)}
           components={{Toolbar: DataGridCustomToolbar}}
+          componentsProps={{
+            toolbar: {searchInput, setSearchInput, setSearch,}
+          }}
         />
       </Box>
     </Box>
