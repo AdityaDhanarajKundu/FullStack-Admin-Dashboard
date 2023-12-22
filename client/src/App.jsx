@@ -8,6 +8,7 @@ import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import Dashboard from './scenes/Dashboard';
 import Layout from './scenes/Layout';
 import Products from "./scenes/Products";
+import Customers from "./scenes/Customers";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
               <Route path='/' element={<Navigate to={"/dashboard"} replace />} />
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/products' element={<Products />} />
+              <Route path='/customers' element={<Customers />} />
             </Route>
           </Routes>
         </ThemeProvider>
