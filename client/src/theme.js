@@ -16,29 +16,29 @@ export const tokensDark = {
     1000: "#000000", // manually adjusted
   },
   primary: {
-    // blue
-    100: "#d3d4de",
-    200: "#a6a9be",
-    300: "#7a7f9d",
-    400: "#4d547d",
-    500: "#21295c",
-    600: "#191F45", // manually adjusted
-    700: "#141937",
-    800: "#0d1025",
-    900: "#070812",
+    // Shades of purple
+    100: "#f3e5f5",
+    200: "#e1bee7",
+    300: "#ce93d8",
+    400: "#ba68c8",
+    500: "#ab47bc",
+    600: "#9c27b0",
+    700: "#8e24aa",
+    800: "#7b1fa2",
+    900: "#6a1b9a",
   },
   secondary: {
-    // yellow
-    50: "#f0f0f0", // manually adjusted
-    100: "#fff6e0",
-    200: "#ffedc2",
-    300: "#ffe3a3",
-    400: "#ffda85",
-    500: "#ffd166",
-    600: "#cca752",
-    700: "#997d3d",
-    800: "#665429",
-    900: "#332a14",
+    // Shades of white with a purplish tint
+    50: "#f9f0ff",
+    100: "#f4e3ff",
+    200: "#ede7f6",
+    300: "#e8daef",
+    400: "#e3d3ea",
+    500: "#d9cfe5",
+    600: "#d1c4e9",
+    700: "#cdc1ef",
+    800: "#b7b0e8",
+    900: "#a29fdc",
   },
 };
 
@@ -94,7 +94,7 @@ export const themeSettings = (mode) => {
             },
             secondary: {
               ...tokensLight.secondary,
-              main: tokensDark.secondary[600],
+              main: tokensDark.secondary[900],
               light: tokensDark.secondary[700],
             },
             neutral: {
