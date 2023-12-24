@@ -26,7 +26,7 @@ export const api = createApi({
             providesTags: ["Transactions"]
         }),
         getGeography: build.query({
-            query: ()=> `general/geography`,
+            query: ()=> `client/geography`,
             providesTags: ["Geography"]
         }),
     })
