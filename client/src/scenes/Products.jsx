@@ -79,7 +79,7 @@ Product.propTypes = {
     rating: PropTypes.number.isRequired,
     category: PropTypes.string.isRequired,
     supply: PropTypes.number.isRequired,
-    stat: PropTypes.object.isRequired
+    stat: PropTypes.array
 };
 
 function Products() {
