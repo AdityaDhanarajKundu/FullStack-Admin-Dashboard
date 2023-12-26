@@ -22,7 +22,6 @@ function Transactions() {
     sort: JSON.stringify(sort),
     search,
   });
-  console.log("data", data);
 
   //creating the columns for the datagrid
   const columns = [
