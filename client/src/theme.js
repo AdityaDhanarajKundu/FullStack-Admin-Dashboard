@@ -16,48 +16,74 @@ export const tokensDark = {
     1000: "#000000", // manually adjusted
   },
   primary: {
-    // Shades of purple
-    100: "#f3e5f5",
-    200: "#e1bee7",
-    300: "#ce93d8",
-    400: "#ba68c8",
-    500: "#ab47bc",
-    600: "#9c27b0",
-    700: "#8e24aa",
-    800: "#7b1fa2",
-    900: "#6a1b9a",
+    // Shades of blue
+    100: "#bbdefb",
+    200: "#90caf9",
+    300: "#64b5f6",
+    400: "#42a5f5",
+    500: "#2196f3",
+    600: "#1e88e5",
+    700: "#1976d2",
+    800: "#1565c0",
+    900: "#0d47a1",
   },
   secondary: {
-    // Shades of white with a purplish tint
-    50: "#f9f0ff",
-    100: "#f4e3ff",
-    200: "#ede7f6",
-    300: "#e8daef",
-    400: "#e3d3ea",
-    500: "#d9cfe5",
-    600: "#d1c4e9",
-    700: "#cdc1ef",
-    800: "#b7b0e8",
-    900: "#a29fdc",
+    // Shades of orange
+    50: "#fff3e0",
+    100: "#ffe0b2",
+    200: "#ffcc80",
+    300: "#ffb74d",
+    400: "#ffa726",
+    500: "#ff9800",
+    600: "#fb8c00",
+    700: "#f57c00",
+    800: "#ef6c00",
+    900: "#e65100",
   },
 };
 
-// function that reverses the color palette
-function reverseTokens(tokensDark) {
-  const reversedTokens = {};
-  Object.entries(tokensDark).forEach(([key, val]) => {
-    const keys = Object.keys(val);
-    const values = Object.values(val);
-    const length = keys.length;
-    const reversedObj = {};
-    for (let i = 0; i < length; i++) {
-      reversedObj[keys[i]] = values[length - i - 1];
-    }
-    reversedTokens[key] = reversedObj;
-  });
-  return reversedTokens;
-}
-export const tokensLight = reverseTokens(tokensDark);
+export const tokensLight = {
+  grey: {
+    0: "#ffffff",
+    10: "#f6f6f6",
+    50: "#f0f0f0",
+    100: "#e0e0e0",
+    200: "#c2c2c2",
+    300: "#a3a3a3",
+    400: "#858585",
+    500: "#666666",
+    600: "#525252",
+    700: "#3d3d3d",
+    800: "#292929",
+    900: "#141414",
+    1000: "#000000",
+  },
+  primary: {
+    // Shades of pink
+    100: "#fce4ec",
+    200: "#f8bbd0",
+    300: "#f48fb1",
+    400: "#f06292",
+    500: "#ec407a",
+    600: "#e91e63",
+    700: "#d81b60",
+    800: "#c2185b",
+    900: "#ad1457",
+  },
+  secondary: {
+    // Shades of green
+    50: "#e8f5e9",
+    100: "#c8e6c9",
+    200: "#a5d6a7",
+    300: "#81c784",
+    400: "#66bb6a",
+    500: "#4caf50",
+    600: "#43a047",
+    700: "#388e3c",
+    800: "#2e7d32",
+    900: "#1b5e20",
+  },
+};
 
 // mui theme settings
 export const themeSettings = (mode) => {
