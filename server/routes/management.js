@@ -3,6 +3,6 @@ import express, { Router } from 'express';
 
 const router = express.Router();
 
-router.get("/admin", getAdmin);
+router.get("/admins", getAdmin);
 
 export default router;
