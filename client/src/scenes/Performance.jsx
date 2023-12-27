@@ -9,7 +9,6 @@ function Performance() {
   const theme = useTheme();
   const userId = useSelector((store) => store.global.userId);
   const { data, isLoading } = useGetUserPerformanceQuery(userId);
-  console.log("Performance", data);
 
   const columns = [
     {
