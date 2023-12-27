@@ -17,7 +17,6 @@ function Layout(){
 
     // making the api call to retrieve the user data using the useGetUserQuery hook RTKQ
     const {data} = useGetUserQuery(userId);
-    console.log("data",data);
     
     return(
         <Box display={isNonMobile ? "flex" : "block"} width={"100%"} height={"100%"}>
