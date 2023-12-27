@@ -1,8 +1,10 @@
-# React + Vite
+## Folders and their Contents
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend part of this project is a vite build and lot of the files are part of the vite template.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- assets : Contains the images used in this project
+- components : Contains the shared components used multiple times in other different components
+- scenes : The main components and the page or tabs that are rendered on the browser
+- state : It contains the essential data for the state management using Redux Toolkit and API endpoints query handling using the Redux Toolkit Query.
+  as well as the required important data for the charts used in the project.
+- theme.js : Contains the primary colors and the theme of this complete project
