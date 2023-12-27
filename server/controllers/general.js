@@ -47,7 +47,7 @@ export async function getDashboardStats(req, res) {
 
     res
       .status(200)
-      .json(
+      .json({
         totalCustomers,
         yearlyTotalSoldUnits,
         yearlySalesTotal,
@@ -55,8 +55,8 @@ export async function getDashboardStats(req, res) {
         salesByCategory,
         thisMonthStats,
         todayStats,
-        transactions
-      );
+        transactions,
+      });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
